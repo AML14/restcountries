@@ -5,13 +5,13 @@ package eu.fayder.restcountries.v1;
 
 import java.util.List;
 
-import eu.fayder.restcountries.v1.domain.Country;
+import eu.fayder.restcountries.v1.domain.CountryV1;
 import org.junit.Assert;
 import org.junit.Test;
 
-import eu.fayder.restcountries.v1.rest.CountryService;
+import eu.fayder.restcountries.v1.rest.CountryServiceV1;
 
-public class CountryServiceTest {
+public class CountryV1ServiceV1Test {
 	
 	@Test
 	public void singletonTest() throws Exception {
@@ -19,7 +19,7 @@ public class CountryServiceTest {
 			new Thread(new Runnable() {
 				@Override
 				public void run() {
-					CountryService.getInstance();
+					CountryServiceV1.getInstance();
 				}
 			}).run();
 		}
@@ -27,7 +27,7 @@ public class CountryServiceTest {
 	
 	@Test
 	public void getAll() throws Exception {
-		List<Country> countries = CountryService.getInstance().getAll();
+		List<CountryV1> countries = CountryServiceV1.getInstance().getAll();
 		Assert.assertNotNull(countries);
 		Assert.assertFalse(countries.isEmpty());
 		System.out.println("TOTAL Countries " + countries.size());
@@ -35,43 +35,43 @@ public class CountryServiceTest {
 	
 	@Test
 	public void getByAlpha2() throws Exception {
-		Country country = CountryService.getInstance().getByAlpha("CO");
+		CountryV1 country = CountryServiceV1.getInstance().getByAlpha("CO");
 		Assert.assertNotNull(country);
 		Assert.assertEquals("CO", country.getAlpha2Code());
 	}
 	
 	@Test
 	public void getByAlpha3() throws Exception {
-		Country country = CountryService.getInstance().getByAlpha("COL");
+		CountryV1 country = CountryServiceV1.getInstance().getByAlpha("COL");
 		Assert.assertNotNull(country);
 		Assert.assertEquals("COL", country.getAlpha3Code());
 	}
 	
 	@Test
 	public void getByCodeList() throws Exception {
-		List<Country> countries = CountryService.getInstance().getByCodeList("CO;NOR;EE");
+		List<CountryV1> countries = CountryServiceV1.getInstance().getByCodeList("CO;NOR;EE");
 		Assert.assertNotNull(countries);
 		Assert.assertFalse(countries.isEmpty());
 		Assert.assertEquals(3, countries.size());
 		
-		for(Country country : countries) {
+		for(CountryV1 country : countries) {
 			Assert.assertTrue(country.getAlpha2Code().equals("CO") || country.getAlpha2Code().equals("NO") || country.getAlpha2Code().equals("EE"));
 		}
 	}
 	
 	@Test
 	public void getByCurrency() throws Exception {
-		List<Country> countries = CountryService.getInstance().getByCurrency("EUR");
+		List<CountryV1> countries = CountryServiceV1.getInstance().getByCurrency("EUR");
 		Assert.assertNotNull(countries);
 		Assert.assertFalse(countries.isEmpty());
-		for(Country country : countries) {
+		for(CountryV1 country : countries) {
 			Assert.assertTrue(country.getCurrencies().contains("EUR"));
 		}
 	}
 	
 	@Test
 	public void getByName() throws Exception {
-		List<Country> countries = CountryService.getInstance().getByName("Norway", false);
+		List<CountryV1> countries = CountryServiceV1.getInstance().getByName("Norway", false);
 		Assert.assertNotNull(countries);
 		Assert.assertFalse(countries.isEmpty());
 		Assert.assertEquals("Norway", countries.get(0).getName());
@@ -79,12 +79,12 @@ public class CountryServiceTest {
 	
 	@Test
 	public void getByNamePriority() throws Exception {
-		List<Country> countries = CountryService.getInstance().getByName("Iran", false);
+		List<CountryV1> countries = CountryServiceV1.getInstance().getByName("Iran", false);
 		Assert.assertNotNull(countries);
 		Assert.assertFalse(countries.isEmpty());
 		Assert.assertEquals("Iran", countries.get(0).getName());
 		
-		countries = CountryService.getInstance().getByName("United", false);
+		countries = CountryServiceV1.getInstance().getByName("United", false);
 		Assert.assertNotNull(countries);
 		Assert.assertFalse(countries.isEmpty());
 		Assert.assertEquals("United States Minor Outlying Islands", countries.get(0).getName());
@@ -92,7 +92,7 @@ public class CountryServiceTest {
 	
 	@Test
 	public void getByNameAlt() throws Exception {
-		List<Country> countries = CountryService.getInstance().getByName("Norge", false);
+		List<CountryV1> countries = CountryServiceV1.getInstance().getByName("Norge", false);
 		Assert.assertNotNull(countries);
 		Assert.assertFalse(countries.isEmpty());
 		Assert.assertEquals("Norway", countries.get(0).getName());
@@ -100,7 +100,7 @@ public class CountryServiceTest {
 	
 	@Test
 	public void getByNameFullText() throws Exception {
-		List<Country> countries = CountryService.getInstance().getByName("Russian Federation", true);
+		List<CountryV1> countries = CountryServiceV1.getInstance().getByName("Russian Federation", true);
 		Assert.assertNotNull(countries);
 		Assert.assertFalse(countries.isEmpty());
 		Assert.assertEquals("Russia", countries.get(0).getName());
@@ -108,14 +108,14 @@ public class CountryServiceTest {
 	
 	@Test
 	public void getByNameFullTextNotFound() throws Exception {
-		List<Country> countries = CountryService.getInstance().getByName("Russian Fed", true);
+		List<CountryV1> countries = CountryServiceV1.getInstance().getByName("Russian Fed", true);
 		Assert.assertNotNull(countries);
 		Assert.assertTrue(countries.isEmpty());
 	}
 	
 	@Test
 	public void getByCallingCode() throws Exception {
-		List<Country> countries = CountryService.getInstance().getByCallingCode("57");
+		List<CountryV1> countries = CountryServiceV1.getInstance().getByCallingCode("57");
 		Assert.assertNotNull(countries);
 		Assert.assertFalse(countries.isEmpty());
 		Assert.assertEquals(1, countries.size());
@@ -124,7 +124,7 @@ public class CountryServiceTest {
 	
 	@Test
 	public void getByCapital() throws Exception {
-		List<Country> countries = CountryService.getInstance().getByCapital("Tallinn");
+		List<CountryV1> countries = CountryServiceV1.getInstance().getByCapital("Tallinn");
 		Assert.assertNotNull(countries);
 		Assert.assertFalse(countries.isEmpty());
 		Assert.assertEquals(1, countries.size());
@@ -134,30 +134,30 @@ public class CountryServiceTest {
 	
 	@Test
 	public void getByRegion() throws Exception {
-		List<Country> countries = CountryService.getInstance().getByRegion("Europe");
+		List<CountryV1> countries = CountryServiceV1.getInstance().getByRegion("Europe");
 		Assert.assertNotNull(countries);
 		Assert.assertFalse(countries.isEmpty());
-		for(Country country : countries) {
+		for(CountryV1 country : countries) {
 			Assert.assertEquals("Europe", country.getRegion());
 		}
 	}
 	
 	@Test
 	public void getBySubregion() throws Exception {
-		List<Country> countries = CountryService.getInstance().getBySubregion("Northern Europe");
+		List<CountryV1> countries = CountryServiceV1.getInstance().getBySubregion("Northern Europe");
 		Assert.assertNotNull(countries);
 		Assert.assertFalse(countries.isEmpty());
-		for(Country country : countries) {
+		for(CountryV1 country : countries) {
 			Assert.assertEquals("Northern Europe", country.getSubregion());
 		}
 	}
 	
 	@Test
 	public void getByLanguageCode() throws Exception {
-		List<Country> countries = CountryService.getInstance().getByLanguage("en");
+		List<CountryV1> countries = CountryServiceV1.getInstance().getByLanguage("en");
 		Assert.assertNotNull(countries);
 		Assert.assertFalse(countries.isEmpty());
-		for(Country country : countries) {
+		for(CountryV1 country : countries) {
 			Assert.assertTrue(country.getLanguages().contains("en"));
 		}
 	}

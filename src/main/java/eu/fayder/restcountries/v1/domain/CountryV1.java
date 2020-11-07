@@ -7,11 +7,11 @@ import java.util.List;
 
 import eu.fayder.restcountries.domain.BaseCountry;
 
-public class Country extends BaseCountry {
+public class CountryV1 extends BaseCountry {
 
     private List<String> currencies;
     private List<String> languages;
-    private CountryTranslations translations;
+    private CountryTranslationsV1 translations;
     private String relevance;
 
     public List<String> getCurrencies() {
@@ -22,7 +22,7 @@ public class Country extends BaseCountry {
         return languages;
     }
 
-    public CountryTranslations getTranslations() {
+    public CountryTranslationsV1 getTranslations() {
         return translations;
     }
 

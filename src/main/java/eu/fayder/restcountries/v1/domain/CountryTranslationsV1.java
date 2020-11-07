@@ -3,7 +3,7 @@
  * file, You can obtain one at http://mozilla.org/MPL/2.0/. */
 package eu.fayder.restcountries.v1.domain;
 
-public class CountryTranslations {
+public class CountryTranslationsV1 {
 	
 	private String de;
 	private String es;

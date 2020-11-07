@@ -8,4 +8,5 @@ target/
 backup/
 .idea/
 *.iml
+*.log
 google*.html

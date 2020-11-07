@@ -8,19 +8,19 @@ import eu.fayder.restcountries.domain.ResponseEntity;
 import eu.fayder.restcountries.v2.domain.Contribution;
 import org.apache.http.util.TextUtils;
 import org.apache.log4j.Logger;
+import org.springframework.stereotype.Component;
 
 import javax.ws.rs.Consumes;
 import javax.ws.rs.POST;
 import javax.ws.rs.Path;
 import javax.ws.rs.core.Response;
-import javax.ws.rs.ext.Provider;
 import java.util.HashMap;
 import java.util.Map;
 
 /**
  * Created by fayder on 24/02/2017.
  */
-@Provider
+@Component
 @Path("/contribute")
 @Consumes("application/json;charset=utf-8")
 public class StripeRest {
