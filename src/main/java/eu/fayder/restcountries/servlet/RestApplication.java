@@ -1,7 +1,6 @@
 package eu.fayder.restcountries.servlet;
 
 import eu.fayder.restcountries.v1.rest.CountryRestV1;
-import eu.fayder.restcountries.v2.rest.StripeRest;
 
 import javax.ws.rs.ApplicationPath;
 import javax.ws.rs.core.Application;
@@ -18,7 +17,6 @@ public class RestApplication extends Application {
     public RestApplication() {
         singletons.add(new CountryRestV1());
         singletons.add(new eu.fayder.restcountries.v2.rest.CountryRest());
-        singletons.add(new StripeRest());
     }
 
     @Override
