@@ -373,3 +373,5 @@ paths:
           description: Successful response
         default:
           description: Other responses
+components:
+  schemas: { }
