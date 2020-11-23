@@ -1,0 +1,631 @@
+{
+  "info": {
+    "_postman_id": "5228a63e-4757-42ab-a80b-7e5187bcc0d8",
+    "name": "restcountries_1_per_op",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "test_1iv73cnx4xum0_v1All",
+      "request": {
+        "method": "GET",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "url": {
+          "raw": "http://localhost:8080/rest/v1/all",
+          "protocol": "http",
+          "host": [
+            "localhost:8080"
+          ],
+          "path": [
+            "rest",
+            "v1",
+            "all"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "test_1jict69d4vbdu_v1Alphacode",
+      "request": {
+        "method": "GET",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "url": {
+          "raw": "http://localhost:8080/rest/v1/alpha/SV",
+          "protocol": "http",
+          "host": [
+            "localhost:8080"
+          ],
+          "path": [
+            "rest",
+            "v1",
+            "alpha",
+            "SV"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "test_1ibkc228kxild_v1Alphacodes",
+      "request": {
+        "method": "GET",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "url": {
+          "raw": "http://localhost:8080/rest/v1/alpha?codes=IMN%3BVG%3BTN",
+          "protocol": "http",
+          "host": [
+            "localhost:8080"
+          ],
+          "path": [
+            "rest",
+            "v1",
+            "alpha"
+          ],
+          "query": [
+            {
+              "key": "codes",
+              "value": "IMN%3BVG%3BTN"
+            }
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "test_t842ns90xnap_v1Currency",
+      "request": {
+        "method": "GET",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "url": {
+          "raw": "http://localhost:8080/rest/v1/currency/TND",
+          "protocol": "http",
+          "host": [
+            "localhost:8080"
+          ],
+          "path": [
+            "rest",
+            "v1",
+            "currency",
+            "TND"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "test_rlap6c5xuxcy_v1Name",
+      "request": {
+        "method": "GET",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "url": {
+          "raw": "http://localhost:8080/rest/v1/name/Algeria?fullText=true",
+          "protocol": "http",
+          "host": [
+            "localhost:8080"
+          ],
+          "path": [
+            "rest",
+            "v1",
+            "name",
+            "Algeria"
+          ],
+          "query": [
+            {
+              "key": "fullText",
+              "value": "true"
+            }
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "test_u8aq6z6e9nw5_v1Callingcode",
+      "request": {
+        "method": "GET",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "url": {
+          "raw": "http://localhost:8080/rest/v1/callingcode/500",
+          "protocol": "http",
+          "host": [
+            "localhost:8080"
+          ],
+          "path": [
+            "rest",
+            "v1",
+            "callingcode",
+            "500"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "test_qxw4m0m98mk1_v1Capital",
+      "request": {
+        "method": "GET",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "url": {
+          "raw": "http://localhost:8080/rest/v1/capital/Bujumbura",
+          "protocol": "http",
+          "host": [
+            "localhost:8080"
+          ],
+          "path": [
+            "rest",
+            "v1",
+            "capital",
+            "Bujumbura"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "test_1hbaf7phkbuqu_v1Region",
+      "request": {
+        "method": "GET",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "url": {
+          "raw": "http://localhost:8080/rest/v1/region/Europe",
+          "protocol": "http",
+          "host": [
+            "localhost:8080"
+          ],
+          "path": [
+            "rest",
+            "v1",
+            "region",
+            "Europe"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "test_1jyjbtn8gq0rm_v1Subregion",
+      "request": {
+        "method": "GET",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "url": {
+          "raw": "http://localhost:8080/rest/v1/subregion/Caribbean",
+          "protocol": "http",
+          "host": [
+            "localhost:8080"
+          ],
+          "path": [
+            "rest",
+            "v1",
+            "subregion",
+            "Caribbean"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "test_u8e0a0uy8jtt_v1Lang",
+      "request": {
+        "method": "GET",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "url": {
+          "raw": "http://localhost:8080/rest/v1/lang/ga",
+          "protocol": "http",
+          "host": [
+            "localhost:8080"
+          ],
+          "path": [
+            "rest",
+            "v1",
+            "lang",
+            "ga"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "test_1ib98yf002qud_v2All",
+      "request": {
+        "method": "GET",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "url": {
+          "raw": "http://localhost:8080/rest/v2/all?fields=capital%3BnativeName%3Blatlng",
+          "protocol": "http",
+          "host": [
+            "localhost:8080"
+          ],
+          "path": [
+            "rest",
+            "v2",
+            "all"
+          ],
+          "query": [
+            {
+              "key": "fields",
+              "value": "capital%3BnativeName%3Blatlng"
+            }
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "test_t4vqe9r5qijq_v2Alphacode",
+      "request": {
+        "method": "GET",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "url": {
+          "raw": "http://localhost:8080/rest/v2/alpha/DK?fields=translations",
+          "protocol": "http",
+          "host": [
+            "localhost:8080"
+          ],
+          "path": [
+            "rest",
+            "v2",
+            "alpha",
+            "DK"
+          ],
+          "query": [
+            {
+              "key": "fields",
+              "value": "translations"
+            }
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "test_trtnll0om3j8_v2Alphacodes",
+      "request": {
+        "method": "GET",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "url": {
+          "raw": "http://localhost:8080/rest/v2/alpha?codes=IRQ%3BAE",
+          "protocol": "http",
+          "host": [
+            "localhost:8080"
+          ],
+          "path": [
+            "rest",
+            "v2",
+            "alpha"
+          ],
+          "query": [
+            {
+              "key": "codes",
+              "value": "IRQ%3BAE"
+            }
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "test_urpm4yyf6tt1_v2Currency",
+      "request": {
+        "method": "GET",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "url": {
+          "raw": "http://localhost:8080/rest/v2/currency/GYD",
+          "protocol": "http",
+          "host": [
+            "localhost:8080"
+          ],
+          "path": [
+            "rest",
+            "v2",
+            "currency",
+            "GYD"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "test_uvgxjw6lhena_v2Name",
+      "request": {
+        "method": "GET",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "url": {
+          "raw": "http://localhost:8080/rest/v2/name/French Guiana",
+          "protocol": "http",
+          "host": [
+            "localhost:8080"
+          ],
+          "path": [
+            "rest",
+            "v2",
+            "name",
+            "French Guiana"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "test_1k22sa5n5rf3s_v2Callingcode",
+      "request": {
+        "method": "GET",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "url": {
+          "raw": "http://localhost:8080/rest/v2/callingcode/55?fields=currencies%3Balpha3Code%3Bflag",
+          "protocol": "http",
+          "host": [
+            "localhost:8080"
+          ],
+          "path": [
+            "rest",
+            "v2",
+            "callingcode",
+            "55"
+          ],
+          "query": [
+            {
+              "key": "fields",
+              "value": "currencies%3Balpha3Code%3Bflag"
+            }
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "test_urry00ih5ut2_v2Capital",
+      "request": {
+        "method": "GET",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "url": {
+          "raw": "http://localhost:8080/rest/v2/capital/Taipei?fields=numericCode",
+          "protocol": "http",
+          "host": [
+            "localhost:8080"
+          ],
+          "path": [
+            "rest",
+            "v2",
+            "capital",
+            "Taipei"
+          ],
+          "query": [
+            {
+              "key": "fields",
+              "value": "numericCode"
+            }
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "test_t4flaapc24ac_v2Region",
+      "request": {
+        "method": "GET",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "url": {
+          "raw": "http://localhost:8080/rest/v2/region/Americas",
+          "protocol": "http",
+          "host": [
+            "localhost:8080"
+          ],
+          "path": [
+            "rest",
+            "v2",
+            "region",
+            "Americas"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "test_vbelbwn1jry1_v2Subregion",
+      "request": {
+        "method": "GET",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "url": {
+          "raw": "http://localhost:8080/rest/v2/subregion/Northern Africa?fields=gini",
+          "protocol": "http",
+          "host": [
+            "localhost:8080"
+          ],
+          "path": [
+            "rest",
+            "v2",
+            "subregion",
+            "Northern Africa"
+          ],
+          "query": [
+            {
+              "key": "fields",
+              "value": "gini"
+            }
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "test_s0ugwibusks9_v2Lang",
+      "request": {
+        "method": "GET",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "url": {
+          "raw": "http://localhost:8080/rest/v2/lang/ss",
+          "protocol": "http",
+          "host": [
+            "localhost:8080"
+          ],
+          "path": [
+            "rest",
+            "v2",
+            "lang",
+            "ss"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "test_1iv9b8zj1pkxd_v2Demonym",
+      "request": {
+        "method": "GET",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "url": {
+          "raw": "http://localhost:8080/rest/v2/demonym/Tongan?fields=capital",
+          "protocol": "http",
+          "host": [
+            "localhost:8080"
+          ],
+          "path": [
+            "rest",
+            "v2",
+            "demonym",
+            "Tongan"
+          ],
+          "query": [
+            {
+              "key": "fields",
+              "value": "capital"
+            }
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "test_vbsjrw7yho4l_v2Regionalbloc",
+      "request": {
+        "method": "GET",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "url": {
+          "raw": "http://localhost:8080/rest/v2/regionalbloc/EFTA",
+          "protocol": "http",
+          "host": [
+            "localhost:8080"
+          ],
+          "path": [
+            "rest",
+            "v2",
+            "regionalbloc",
+            "EFTA"
+          ]
+        }
+      },
+      "response": []
+    }
+  ]
+}
